@@ -11,15 +11,62 @@ public class FilteringAppls {
                 new Apple(80, Color.GREEN),
                 new Apple(155, Color.GREEN),
                 new Apple(120, Color.RED));
-
+        // 01
         List<Apple> apples = filterGreenApples(inventory);
-        System.out.println(apples);
+        System.out.println("01. 그린 애플 필터링= " + apples);
+        // 02-1
+        List<Apple> greenApples = filterApplesByColor(inventory, Color.GREEN);
+        List<Apple> redApples = filterApplesByColor(inventory, Color.RED);
+        System.out.println("02-1. color 를 파라미터로 초록사과= " + greenApples);
+        System.out.println("02-1. color 를 파라미터로 빨간사과= " + redApples);
+        // 02-2
+        List<Apple> heavyApples = filterApplesByWeight(inventory, 150);
+        System.out.println("02-2. 무거운 사과= " + heavyApples);
+        // 03
+        greenApples = filterApples(inventory, Color.GREEN, 0, true);
+        heavyApples = filterApples(inventory, null, 150, false);
+        System.out.println("03. 초록사과= " + greenApples);
+        System.out.println("03. 무거운 사과= " + heavyApples);
     }
-
+    // ex.01
     public static List<Apple> filterGreenApples(List<Apple> inventory) {
         List<Apple> result = new ArrayList<>();
         for (Apple apple : inventory) {
             if (apple.getColor() == Color.GREEN) {
+                result.add(apple);
+            }
+        }
+        return result;
+    }
+
+    // ex.02-1
+    public static List<Apple> filterApplesByColor(List<Apple> inventory, Color color) {
+        List<Apple> result = new ArrayList<>();
+        for (Apple apple: inventory) {
+            if (apple.getColor().equals(color)) {
+                result.add(apple);
+            }
+        }
+        return result;
+    }
+
+    // ex.02-2
+    public static List<Apple> filterApplesByWeight(List<Apple> inventory, int weight) {
+        List<Apple> result = new ArrayList<>();
+        for (Apple apple: inventory) {
+            if (apple.getWeight() > (weight)) {
+                result.add(apple);
+            }
+        }
+        return result;
+    }
+
+    // ex.03 가능한 모든 파라미터 입력 + 구분 flag 사용
+    public static List<Apple> filterApples(List<Apple> inventory, Color color, int weight, boolean flag) {
+        List<Apple> result = new ArrayList<>();
+        for (Apple apple: inventory) {
+            if ((flag && apple.getColor().equals(color)) ||
+                    (!flag && apple.getWeight() > weight)) {
                 result.add(apple);
             }
         }
