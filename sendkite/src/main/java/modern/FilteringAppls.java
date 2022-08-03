@@ -27,7 +27,23 @@ public class FilteringAppls {
         heavyApples = filterApples(inventory, null, 150, false);
         System.out.println("03. 초록사과= " + greenApples);
         System.out.println("03. 무거운 사과= " + heavyApples);
+
+        // 04. 동작파라미터화 전략 패턴 -> 객체가 동작을 결정
+        System.out.println("04. 초록 사과= " + filterApples(inventory, new AppleGreenColorPredicate()));
+        System.out.println("04. 무거운 사과= " + filterApples(inventory, new AppleHeavyWeightPredicate()));
     }
+
+    // 04. 동작파라미터화
+    public static List<Apple> filterApples(List<Apple> inventory, ApplePredicate p) {
+        List<Apple> result = new ArrayList<>();
+        for (Apple apple: inventory) {
+            if(p.test(apple)) {
+                result.add(apple);
+            }
+        }
+        return result;
+    }
+
     // ex.01
     public static List<Apple> filterGreenApples(List<Apple> inventory) {
         List<Apple> result = new ArrayList<>();
