@@ -22,8 +22,8 @@ java -jar 파일명.jar <- manifest 정보가 없다고 알림 -> 인텔리제�
 3. 인텔리제이로 설정
 
 ```shell
-1. command + ; 명령어 project structure에 project를 sendkite로 변경
-2. sendkite 폴더에 마우스 커서 왼쪽 클릭 > new > add module로 directory 생성 > 이때 Java, frameworks 설정 config 창이 뜬다.
+1. command + ; 명령어 project structure에 project를 java-lab으로 변경
+2. java-lab 폴더에 마우스 커서 왼쪽 클릭 > new > add module로 directory 생성 > 이때 Java, frameworks 설정 config 창이 뜬다.
 3. maven으로 생성
 4. java 코드 run
 ```
