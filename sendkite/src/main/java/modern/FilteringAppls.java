@@ -1,5 +1,14 @@
 package modern;
 
+import modern.domain.Apple;
+import modern.domain.Color;
+import modern.util.formatter.AppleFormatter;
+import modern.util.formatter.ApplePrintFormatter;
+import modern.util.formatter.ApplePrintWeightFormatter;
+import modern.util.predicator.AppleGreenColorPredicate;
+import modern.util.predicator.AppleHeavyWeightPredicate;
+import modern.util.predicator.ApplePredicate;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -31,6 +40,17 @@ public class FilteringAppls {
         // 04. 동작파라미터화 전략 패턴 -> 객체가 동작을 결정
         System.out.println("04. 초록 사과= " + filterApples(inventory, new AppleGreenColorPredicate()));
         System.out.println("04. 무거운 사과= " + filterApples(inventory, new AppleHeavyWeightPredicate()));
+
+        // Quiz 2-1 prettyPrintApple
+        prettyPrintApple(inventory, new ApplePrintFormatter());
+        prettyPrintApple(inventory, new ApplePrintWeightFormatter());
+    }
+
+    private static void prettyPrintApple(List<Apple> inventory, AppleFormatter formatter) {
+        for (Apple apple: inventory) {
+            String output = formatter.accept(apple);
+            System.out.println(output);
+        }
     }
 
     // 04. 동작파라미터화

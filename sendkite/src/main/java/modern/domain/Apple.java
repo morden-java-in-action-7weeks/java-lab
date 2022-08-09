@@ -1,4 +1,4 @@
-package modern;
+package modern.domain;
 
 public class Apple {
 
