@@ -44,6 +44,10 @@ public class FilteringAppls {
         // Quiz 2-1 prettyPrintApple
         prettyPrintApple(inventory, new ApplePrintFormatter());
         prettyPrintApple(inventory, new ApplePrintWeightFormatter());
+
+        // 06. 람다 표현식
+        List<Apple> result = filterApples(inventory, (Apple apple) -> Color.RED.equals(apple.getColor()));
+        System.out.println(result);
     }
 
     private static void prettyPrintApple(List<Apple> inventory, AppleFormatter formatter) {
