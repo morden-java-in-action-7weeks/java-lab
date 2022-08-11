@@ -1,4 +1,6 @@
-package modern;
+package modern.util.predicator;
+
+import modern.domain.Apple;
 
 public class AppleHeavyWeightPredicate implements ApplePredicate {
 
