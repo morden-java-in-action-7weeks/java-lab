@@ -39,21 +39,21 @@ public class Apple {
 
 ```
 /**
-*  첫 번쨰 시도, 녹색 사과만 필터링
-*   - 요구사항 변경에 유연하지 않은 코드
-*   - 다른 색을 필터링 하고 싶다면, 코드를 수정해야함
-      */
-      public class Chapter2_1_녹색사과필터링 {
-      public static List<Apple> filterGreenApplesList(List<Apple> inventory){
-      List<Apple> result = new ArrayList<>();
-      for (Apple apple : inventory) {
-      if (Color.GREEN.equals(apple.getColor())) {
-      result.add(apple);
-      }
-      }
-      return result;
-      }
-      }
+ *  첫 번쨰 시도, 녹색 사과만 필터링
+ *   - 요구사항 변경에 유연하지 않은 코드
+ *   - 다른 색을 필터링 하고 싶다면, 코드를 수정해야함
+ */
+public class Chapter2_1_녹색사과필터링 {
+    public static List<Apple> filterGreenApplesList(List<Apple> inventory){
+        List<Apple> result = new ArrayList<>();
+        for (Apple apple : inventory) {
+            if (Color.GREEN.equals(apple.getColor())) {
+                result.add(apple);
+            }
+        }
+        return result;
+    }
+}
 ```
 
 - 오로지 녹색사과만을 필터링하는 코드입니다.
@@ -68,25 +68,25 @@ public class Apple {
 
 ```
 /**
-*  두 번째 시도, 색을 파라미터화
-*   - 외부에서 받아오는 파라미터로 공통되는 색을 추상화
-*   - 색 비교에는 확장에 제한을 받지않음
-*
-*   -> 그러나, 요구사항의 변경에는 여전히 유연하지 못함
-*   ex) 무게 비교, 모양비교 등등
-    */
+ *  두 번째 시도, 색을 파라미터화
+ *   - 외부에서 받아오는 파라미터로 공통되는 색을 추상화
+ *   - 색 비교에는 확장에 제한을 받지않음
+ *
+ *   -> 그러나, 요구사항의 변경에는 여전히 유연하지 못함
+ *   ex) 무게 비교, 모양비교 등등
+ */
 
 public class Chapter2_2_색을파라미터화 {
-public static List<Apple> filterGreenApplesList(List<Apple> inventory, Color color){
-List<Apple> result = new ArrayList<>();
-for (Apple apple : inventory) {
-// -- 파라미터로 받은 color 로 비교
-if (apple.getColor().equals(color)) {
-result.add(apple);
-}
-}
-return result;
-}
+    public static List<Apple> filterGreenApplesList(List<Apple> inventory, Color color){
+        List<Apple> result = new ArrayList<>();
+        for (Apple apple : inventory) {
+            // -- 파라미터로 받은 color 로 비교
+            if (apple.getColor().equals(color)) {
+                result.add(apple);
+            }
+        }
+        return result;
+    }
 }
 ```
 
@@ -102,24 +102,24 @@ return result;
 - 가장가장 안좋은 방법입니다.
 
 /**
-*  세 번쨰 시도, 가능한 모든 속성으로 필터링
-*   - 가능한 모든 경우를 생각하고 필터링
-*
-*   -> 가장 쓰레기 코드
-    */
+ *  세 번쨰 시도, 가능한 모든 속성으로 필터링
+ *   - 가능한 모든 경우를 생각하고 필터링
+ *
+ *   -> 가장 쓰레기 코드
+ */
 
 public class Chapter2_3_가능한_모든_속성으로필터링 {
-public static List<Apple> filterGreenApplesList(List<Apple> inventory, Color color, int weight, boolean flag){
-List<Apple> result = new ArrayList<>();
-for (Apple apple : inventory) {
-// 뭘할려는 건지, 코드만 보고 전혀 알 수 가 없음
-if((flag && apple.getColor().equals(color)) ||
-(!flag &&apple.getWeight() > weight)) {
-result.add(apple);
-}
-}
-return result;
-}
+    public static List<Apple> filterGreenApplesList(List<Apple> inventory, Color color, int weight, boolean flag){
+        List<Apple> result = new ArrayList<>();
+        for (Apple apple : inventory) {
+            // 뭘할려는 건지, 코드만 보고 전혀 알 수 가 없음
+            if((flag && apple.getColor().equals(color)) ||
+                (!flag &&apple.getWeight() > weight)) {
+                result.add(apple);
+            }
+        }
+        return result;
+    }
 }
 ```
 
@@ -138,30 +138,30 @@ return result;
 
 ```
 public interface ApplePredicate {
-boolean test(Apple apple);
+    boolean test(Apple apple);
 }
 ```
 
 ```
 /**
-*  네 번째 시도, 추상적 조건으로 필터링
-*  - 외부에서 어떤 조건을 받아올거라면, 그 조건을 추상화
-*
-*  -> 메서도가 다양한 동작을 받아서, 내부에서 수행할 수 있도록 함
-*  -> 메서도는, 내부 로직만 신경쓰면 됨 (결합도 분리)
-   */
+ *  네 번째 시도, 추상적 조건으로 필터링
+ *  - 외부에서 어떤 조건을 받아올거라면, 그 조건을 추상화
+ *
+ *  -> 메서도가 다양한 동작을 받아서, 내부에서 수행할 수 있도록 함
+ *  -> 메서도는, 내부 로직만 신경쓰면 됨 (결합도 분리)
+ */
 
 public class Chapter2_4_추상조건으로_필터링 {
-public static List<Apple> filterGreenApplesList(List<Apple> inventory, ApplePredicate applePredicate){
-List<Apple> result = new ArrayList<>();
-for (Apple apple : inventory) {
-// 비교 조건은, 파라미터로 받는 predicate 에 책임 위임
-if(applePredicate.test(apple)){
-result.add(apple);
-}
-}
-return result;
-}
+    public static List<Apple> filterGreenApplesList(List<Apple> inventory, ApplePredicate applePredicate){
+        List<Apple> result = new ArrayList<>();
+        for (Apple apple : inventory) {
+            // 비교 조건은, 파라미터로 받는 predicate 에 책임 위임
+            if(applePredicate.test(apple)){
+                result.add(apple);
+            }
+        }
+        return result;
+    }
 }
 
 class AppleHeavyPredicate implements ApplePredicate{
