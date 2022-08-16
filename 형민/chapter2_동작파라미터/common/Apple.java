@@ -8,5 +8,5 @@ import lombok.Data;
 public class Apple {
 
     public Color color;
-    public int weight;
+    public Integer weight;
 }
