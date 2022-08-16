@@ -24,3 +24,20 @@ public class Chapter2_4_추상조건으로_필터링 {
         return result;
     }
 }
+
+class AppleHeavyPredicate implements ApplePredicate{
+
+    public boolean test(Apple apple) {
+        //무게 비교
+        return false;
+    }
+}
+
+
+class AppleColorPredicate implements ApplePredicate{
+
+    public boolean test(Apple apple) {
+        //색상 비교
+        return false;
+    }
+}
