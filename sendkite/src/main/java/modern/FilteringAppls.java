@@ -1,7 +1,7 @@
 package modern;
 
 import modern.domain.Apple;
-import modern.domain.Color;
+import modern.domain.type.Color;
 import modern.util.formatter.AppleFormatter;
 import modern.util.formatter.ApplePrintFormatter;
 import modern.util.formatter.ApplePrintWeightFormatter;
