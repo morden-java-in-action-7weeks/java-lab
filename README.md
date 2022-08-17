@@ -28,72 +28,34 @@
 │   ├── README.md
 │   ├── pom.xml
 │   ├── sendkite.iml
-│   ├── src
-│   │   ├── main
-│   │   │   ├── java
-│   │   │   │   └── modern
-│   │   │   │       ├── ExecuteAround.java
-│   │   │   │       ├── FilteringAppls.java
-│   │   │   │       ├── LambdaFilterApples.java
-│   │   │   │       ├── StreamPractive.java
-│   │   │   │       ├── data.txt
-│   │   │   │       ├── domain
-│   │   │   │       │   ├── Apple.java
-│   │   │   │       │   ├── Dish.java
-│   │   │   │       │   └── type
-│   │   │   │       │       ├── Color.java
-│   │   │   │       │       └── Type.java
-│   │   │   │       └── util
-│   │   │   │           ├── formatter
-│   │   │   │           │   ├── AppleFormatter.java
-│   │   │   │           │   ├── ApplePrintFormatter.java
-│   │   │   │           │   └── ApplePrintWeightFormatter.java
-│   │   │   │           └── predicator
-│   │   │   │               ├── AppleGreenColorPredicate.java
-│   │   │   │               ├── AppleHeavyWeightPredicate.java
-│   │   │   │               └── ApplePredicate.java
-│   │   │   └── resources
-│   │   └── test
-│   │       └── java
-│   └── target
-│       ├── classes
-│       │   └── modern
-│       │       ├── ExecuteAround$BufferedReaderProcessor.class
-│       │       ├── ExecuteAround.class
-│       │       ├── FilteringAppls.class
-│       │       ├── LambdaFilterApples.class
-│       │       ├── StreamPractive$1.class
-│       │       ├── StreamPractive.class
-│       │       ├── data.txt
-│       │       ├── domain
-│       │       │   ├── Apple.class
-│       │       │   ├── Dish.class
-│       │       │   └── type
-│       │       │       ├── Color.class
-│       │       │       └── Type.class
-│       │       └── util
-│       │           ├── formatter
-│       │           │   ├── AppleFormatter.class
-│       │           │   ├── ApplePrintFormatter.class
-│       │           │   └── ApplePrintWeightFormatter.class
-│       │           └── predicator
-│       │               ├── AppleGreenColorPredicate.class
-│       │               ├── AppleHeavyWeightPredicate.class
-│       │               └── ApplePredicate.class
-│       ├── generated-sources
-│       │   └── annotations
-│       ├── maven-archiver
-│       │   └── pom.properties
-│       ├── maven-status
-│       │   └── maven-compiler-plugin
-│       │       ├── compile
-│       │       │   └── default-compile
-│       │       │       ├── createdFiles.lst
-│       │       │       └── inputFiles.lst
-│       │       └── testCompile
-│       │           └── default-testCompile
-│       │               └── inputFiles.lst
-│       └── sendkite-1.0-SNAPSHOT.jar
+│   └── src
+│      └── main
+│        ├── java
+│        │   └── modern
+│        │       ├── ExecuteAround.java
+│        │       ├── FilteringAppls.java
+│        │       ├── LambdaFilterApples.java
+│        │       ├── StreamPractive.java
+│        │       ├── data.txt
+│        │       ├── domain
+│        │       │   ├── Apple.java
+│        │       │   ├── Dish.java
+│        │       │   └── type
+│        │       │       ├── Color.java
+│        │       │       └── Type.java
+│        │       └── util
+│        │           ├── formatter
+│        │           │   ├── AppleFormatter.java
+│        │           │   ├── ApplePrintFormatter.java
+│        │           │   └── ApplePrintWeightFormatter.java
+│        │           └── predicator
+│        │               ├── AppleGreenColorPredicate.java
+│        │               ├── AppleHeavyWeightPredicate.java
+│        │               └── ApplePredicate.java
+│        └── resources
+│      
+│         
+│   
 └── 형민
     └── chapter2_동작파라미터
         ├── ApplePredicate.java
