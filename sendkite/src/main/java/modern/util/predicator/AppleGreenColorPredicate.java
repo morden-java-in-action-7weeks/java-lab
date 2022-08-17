@@ -1,7 +1,7 @@
 package modern.util.predicator;
 
 import modern.domain.Apple;
-import modern.domain.Color;
+import modern.domain.type.Color;
 
 public class AppleGreenColorPredicate implements ApplePredicate {
 

@@ -1,5 +1,7 @@
 package modern.domain;
 
+import modern.domain.type.Color;
+
 public class Apple {
 
     private int weight;
