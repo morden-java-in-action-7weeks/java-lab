@@ -20,38 +20,81 @@
 
 ```shell
 .
-├── README.md 
-├── archive : 함께 공부한 내용 정리
-│   └── 0725 
+├── README.md
+├── archive
+│   └── 0725
 │       └── chapter01.md
-├── sendkite : 전송연의 실습 코드
-│   ├── README.md 
+├── sendkite
+│   ├── README.md
 │   ├── pom.xml
+│   ├── sendkite.iml
 │   ├── src
 │   │   ├── main
 │   │   │   ├── java
 │   │   │   │   └── modern
-│   │   │   │       ├── Apple.java
-│   │   │   │       ├── AppleGreenColorPredicate.java
-│   │   │   │       ├── AppleHeavyWeightPredicate.java
-│   │   │   │       ├── ApplePredicate.java
-│   │   │   │       ├── Color.java
-│   │   │   │       └── FilteringAppls.java <- 자바 실행 main() 메서드 있는 곳
+│   │   │   │       ├── ExecuteAround.java
+│   │   │   │       ├── FilteringAppls.java
+│   │   │   │       ├── LambdaFilterApples.java
+│   │   │   │       ├── StreamPractive.java
+│   │   │   │       ├── data.txt
+│   │   │   │       ├── domain
+│   │   │   │       │   ├── Apple.java
+│   │   │   │       │   ├── Dish.java
+│   │   │   │       │   └── type
+│   │   │   │       │       ├── Color.java
+│   │   │   │       │       └── Type.java
+│   │   │   │       └── util
+│   │   │   │           ├── formatter
+│   │   │   │           │   ├── AppleFormatter.java
+│   │   │   │           │   ├── ApplePrintFormatter.java
+│   │   │   │           │   └── ApplePrintWeightFormatter.java
+│   │   │   │           └── predicator
+│   │   │   │               ├── AppleGreenColorPredicate.java
+│   │   │   │               ├── AppleHeavyWeightPredicate.java
+│   │   │   │               └── ApplePredicate.java
 │   │   │   └── resources
 │   │   └── test
 │   │       └── java
 │   └── target
 │       ├── classes
 │       │   └── modern
-│       │       ├── Apple.class
-│       │       ├── AppleGreenColorPredicate.class
-│       │       ├── AppleHeavyWeightPredicate.class
-│       │       ├── ApplePredicate.class
-│       │       ├── Color.class
-│       │       └── FilteringAppls.class
-│       └── generated-sources
-│           └── annotations
-└── 형민 : 박형민의 실습 코드
+│       │       ├── ExecuteAround$BufferedReaderProcessor.class
+│       │       ├── ExecuteAround.class
+│       │       ├── FilteringAppls.class
+│       │       ├── LambdaFilterApples.class
+│       │       ├── StreamPractive$1.class
+│       │       ├── StreamPractive.class
+│       │       ├── data.txt
+│       │       ├── domain
+│       │       │   ├── Apple.class
+│       │       │   ├── Dish.class
+│       │       │   └── type
+│       │       │       ├── Color.class
+│       │       │       └── Type.class
+│       │       └── util
+│       │           ├── formatter
+│       │           │   ├── AppleFormatter.class
+│       │           │   ├── ApplePrintFormatter.class
+│       │           │   └── ApplePrintWeightFormatter.class
+│       │           └── predicator
+│       │               ├── AppleGreenColorPredicate.class
+│       │               ├── AppleHeavyWeightPredicate.class
+│       │               └── ApplePredicate.class
+│       ├── generated-sources
+│       │   └── annotations
+│       ├── maven-archiver
+│       │   └── pom.properties
+│       ├── maven-status
+│       │   └── maven-compiler-plugin
+│       │       ├── compile
+│       │       │   └── default-compile
+│       │       │       ├── createdFiles.lst
+│       │       │       └── inputFiles.lst
+│       │       └── testCompile
+│       │           └── default-testCompile
+│       │               └── inputFiles.lst
+│       └── sendkite-1.0-SNAPSHOT.jar
+└── 형민
     └── chapter2_동작파라미터
         ├── ApplePredicate.java
         ├── Chapter2_1_녹색사과필터링.java
@@ -65,6 +108,7 @@
             ├── Apple.java
             └── Color.java
 
+
 ```
 
 ## 🐾 Schedule
@@ -73,3 +117,6 @@
 | :-: | :--------: | :--------------------------------------------------: |
 |  1  | 2022-07-25 | [1장] 자바 8, 9, 10, 11 : 무슨 일이 일어나고 있는가? |
 |  2  | 2022-08-04 |         [2장] 동작 파라미터화 코드 전달하기          |
+|  3  | 2022-08-11 |         [3장] 람다 표현식          |
+|  4  | 2022-08-18 |         [4장] 스트림 소개          |
+
