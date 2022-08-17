@@ -20,56 +20,63 @@
 
 ```shell
 .
-├── README.md
-├── archive
-│   └── 0725
-│       └── chapter01.md
-├── sendkite
-│   ├── README.md
-│   ├── pom.xml
-│   ├── sendkite.iml
-│   └── src
-│      └── main
-│        ├── java
-│        │   └── modern
-│        │       ├── ExecuteAround.java
-│        │       ├── FilteringAppls.java
-│        │       ├── LambdaFilterApples.java
-│        │       ├── StreamPractive.java
-│        │       ├── data.txt
-│        │       ├── domain
-│        │       │   ├── Apple.java
-│        │       │   ├── Dish.java
-│        │       │   └── type
-│        │       │       ├── Color.java
-│        │       │       └── Type.java
-│        │       └── util
-│        │           ├── formatter
-│        │           │   ├── AppleFormatter.java
-│        │           │   ├── ApplePrintFormatter.java
-│        │           │   └── ApplePrintWeightFormatter.java
-│        │           └── predicator
-│        │               ├── AppleGreenColorPredicate.java
-│        │               ├── AppleHeavyWeightPredicate.java
-│        │               └── ApplePredicate.java
-│        └── resources
-│      
-│         
-│   
-└── 형민
-    └── chapter2_동작파라미터
-        ├── ApplePredicate.java
-        ├── Chapter2_1_녹색사과필터링.java
-        ├── Chapter2_2_색을파라미터화.java
-        ├── Chapter2_3_가능한_모든_속성으로필터링.java
-        ├── Chapter2_4_추상조건으로_필터링.java
-        ├── Chapter2_5_익명클래스.java
-        ├── Chapter2_6_람다표현식.java
-        ├── Chapter2_7_리스트형식으로_추상화.java
-        └── common
-            ├── Apple.java
-            └── Color.java
-
+└── java-lab
+    ├── README.md
+    ├── archive
+    │   └── 0725
+    │       ├── chapter01.md
+    │       └── chapter02.md
+    ├── sendkite
+    │   ├── README.md
+    │   ├── pom.xml
+    │   ├── sendkite.iml
+    │   └── src
+    │       ├── main
+    │       │   ├── java
+    │       │   │   └── modern
+    │       │   │       ├── ExecuteAround.java
+    │       │   │       ├── FilteringAppls.java
+    │       │   │       ├── LambdaFilterApples.java
+    │       │   │       ├── StreamPractive.java
+    │       │   │       ├── data.txt
+    │       │   │       ├── domain
+    │       │   │       │   ├── Apple.java
+    │       │   │       │   ├── Dish.java
+    │       │   │       │   └── type
+    │       │   │       │       ├── Color.java
+    │       │   │       │       └── Type.java
+    │       │   │       └── util
+    │       │   │           ├── formatter
+    │       │   │           │   ├── AppleFormatter.java
+    │       │   │           │   ├── ApplePrintFormatter.java
+    │       │   │           │   └── ApplePrintWeightFormatter.java
+    │       │   │           └── predicator
+    │       │   │               ├── AppleGreenColorPredicate.java
+    │       │   │               ├── AppleHeavyWeightPredicate.java
+    │       │   │               └── ApplePredicate.java
+    │       │   └── resources
+    │       └── test
+    │           └── java
+    └── 형민
+        ├── chapter2_동작파라미터
+        │   ├── ApplePredicate.java
+        │   ├── Chapter2_1_녹색사과필터링.java
+        │   ├── Chapter2_2_색을파라미터화.java
+        │   ├── Chapter2_3_가능한_모든_속성으로필터링.java
+        │   ├── Chapter2_4_추상조건으로_필터링.java
+        │   ├── Chapter2_5_익명클래스.java
+        │   ├── Chapter2_6_람다표현식.java
+        │   ├── Chapter2_7_리스트형식으로_추상화.java
+        │   └── common
+        │       ├── Apple.java
+        │       └── Color.java
+        └── chapter3_람다표현식
+            ├── BufferedReaderProcessor.java
+            ├── Chapter3_1_람다기본표현식.java
+            ├── Chapter3_2_함수형인터페이스.java
+            ├── Chapter3_2_함수형인터페이스_예제.java
+            ├── Chapter3_3_형식추론.java
+            └── Runnable.java
 
 ```
 
