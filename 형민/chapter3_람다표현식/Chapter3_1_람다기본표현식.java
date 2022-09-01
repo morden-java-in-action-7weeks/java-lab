@@ -25,6 +25,7 @@ public class Chapter3_1_람다기본표현식 {
      * 람다 예시
      */
 
+    /*
     //람다는 return이 함축되어 있음
      int slen = (String s) -> s.length();
 
@@ -37,6 +38,7 @@ public class Chapter3_1_람다기본표현식 {
 
     //람다의 파라미터가 없을 수도 있다. 이때는 42를 그대로 반환
     () -> 42
+    */
 
 
 }
